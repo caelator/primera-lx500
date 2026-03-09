@@ -1,0 +1,46 @@
+{
+  "name": "primera-lx500",
+  "version": "1.0.0",
+  "description": "Open-source Node.js SDK for the Primera LX500 / ColorLabel 500 label printer. Direct USB control — bypass proprietary drivers.",
+  "main": "src/index.ts",
+  "bin": {
+    "primera-cli": "src/cli.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "status": "sudo npx ts-node src/cli.ts status",
+    "ink": "sudo npx ts-node src/cli.ts ink",
+    "cli": "sudo npx ts-node src/cli.ts"
+  },
+  "keywords": [
+    "primera",
+    "lx500",
+    "label-printer",
+    "printer-sdk",
+    "usb",
+    "escpos",
+    "thermal-printer",
+    "color-label"
+  ],
+  "author": "Caelator",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clawbotai/primera-lx500.git"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5",
+    "usb": "^2.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "@types/usb": "^2.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
